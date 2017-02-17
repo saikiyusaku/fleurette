@@ -1,0 +1,25 @@
+#container {
+	text-align: left;
+}
+
+#header {
+	padding: 10px 100px;
+}
+
+#header h1 {
+	line-height:20px;
+	padding: 0 30px;
+}
+
+#header h1 a {
+	color: #4e4b4b;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+/*.content:after {
+	content: '';
+	display: block;
+	clear: both;
+}*/
+

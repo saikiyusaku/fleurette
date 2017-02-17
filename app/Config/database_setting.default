@@ -1,0 +1,34 @@
+create table posts (
+	id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	title VARCHAR(50),
+	body TEXT,
+	imagename TEXT,
+	created DATETIME DEFAULT NULL,
+	modified DATETIME DEFAULT NULL
+);
+
+create table flowers (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(50),
+	body TEXT,
+	price INT,
+	created DATETIME DEFAULT NULL,
+	modified DATETIME DEFAULT NULL
+);
+
+create table plants (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(50),
+	body TEXT,
+	price INT,
+	created DATETIME DEFAULT NULL,
+	modified DATETIME DEFAULT NULL
+);
+
+
+INSERT INTO posts (title,body,created)
+    VALUES ('一つ目の記事', 'これは、記事の本文です。たくさん文字数が入ります。this is first posts. its test.', NOW());
+INSERT INTO posts (title,body,created)
+    VALUES ('サイト(お店)の名前はとりあえずfleurette', 'そこに本文が続きます。これはフランス語でウィッピングという意味。Norah Jonesの曲名より。', NOW());
+INSERT INTO posts (title,body,created)
+    VALUES ('会社のHPだけなら複雑なDB処理はなさそう。', 'そこに本文が続きます。画像処理を軽くしたい。とりあえずはURLから引っ張ってくる感じでしのぐが、後で要修正。good luck!!', NOW());
