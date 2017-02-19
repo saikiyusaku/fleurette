@@ -25,11 +25,12 @@
 		<?php echo 'fleurette' ?>:
 		<?php echo $this->fetch('title'); ?>
 	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php
 		echo $this->Html->meta('icon');
 
-		// echo $this->Html->css('cake.generic');
 		echo $this->Html->css('cover_all');
+		echo $this->Html->css('bootstrap.min');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -39,7 +40,7 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link('fleurette', array('controller' => 'posts', 'action' => 'index')); ?></h1>
+			<h1><?php echo $this->Html->link('Top Page', array('controller' => 'posts', 'action' => 'index')); ?></h1>
 		</div>
 		<div id="content">
 
@@ -53,5 +54,7 @@
 			</p>
 		</div>
 	</div>
+<script src="http://code.jquery.com/jquery.js"></script>
+<?php echo $this->Html->script('bootstrap.min'); ?>
 </body>
 </html>

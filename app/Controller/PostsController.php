@@ -9,13 +9,13 @@ class PostsController extends AppController {
 		$posts = $this->Post->find('all');
 		$this->set('posts', $posts);
 
-		foreach ($posts as $post) {
-			if (!empty($post['Post']['imagename'])) {
-				$blogImage = $post['Post']['imagename'];
-				// $this->log($blogImage);
-				$this->set('blogImage', $blogImage);
-			}
-		}
+		// foreach ($posts as $post) {
+		// 	if (!empty($post['Post']['imagename'])) {
+		// 		$blogImage = $post['Post']['imagename'];
+		// 		// $this->log($blogImage);
+		// 		$this->set('blogImage', $blogImage);
+		// 	}
+		// }
 
 	}
 
@@ -29,6 +29,7 @@ class PostsController extends AppController {
 		if (!$post) {
 			throw new NotFoundException(__('Invalid post'));
 		}
+		// $this->log($post);
 		$this->set('post', $post);
 	}
 
@@ -37,6 +38,7 @@ class PostsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
+				// $this->log($this->request->data);
 				$this->Flash->success(__('Your post has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			}
@@ -59,7 +61,7 @@ class PostsController extends AppController {
 			$this->Post->id = $id;
 			if ($this->Post->save($this->request->data)) {
 				$this->Flash->success(__('Your post has been updated.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('action' => 'view', $id));
 			}
 			$this->Flash->error(__('Unable to update your post.'));
 		}

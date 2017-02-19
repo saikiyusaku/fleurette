@@ -1,14 +1,17 @@
-#container {
-	text-align: left;
+.blog_all p {
+	padding-left: 78px;
 }
 
-#header {
-	padding: 10px 100px;
+#container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1050px;
+
+	/*background-color: rgba(255, 0, 0, 0.15);*/
 }
 
 #header h1 {
-	line-height:20px;
-	padding: 0 30px;
+	padding-left: 71px;
 }
 
 #header h1 a {
@@ -17,9 +20,10 @@
 	text-decoration: none;
 }
 
-/*.content:after {
-	content: '';
-	display: block;
-	clear: both;
-}*/
+#footer {
+	max-width: 1050px;
+}
 
+#footer p {
+	padding-left: 71px;
+}
