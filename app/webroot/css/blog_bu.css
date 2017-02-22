@@ -3,6 +3,12 @@
 	background-color: rgba(0,0,0,0.4);
 }*/
 
+.blog_all {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1050px;
+}
+
 .blog_list {
   margin-left: auto;
   margin-right: auto;

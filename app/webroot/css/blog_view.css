@@ -1,6 +1,9 @@
 .blog_view_all {
-	width: 1050px;
-	text-align: center;
+	/*width: 1050px;
+	text-align: center;*/
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1050px;
 }
 
 .blog_view_all > p {
