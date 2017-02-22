@@ -12,3 +12,23 @@
 /*.blog_view_all p {
 	text-align: center;
 }*/
+
+
+
+/*ここからplants/view.ctp*/
+
+.resizeimage {
+	height: 700px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.resizeimage img {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	left: 50%;
+	top: 50%;
+}

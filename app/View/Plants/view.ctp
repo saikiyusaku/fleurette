@@ -1,8 +1,12 @@
 <!-- File: /app/View/Plants/view.ctp -->
+<?php 
 
+echo $this->Html->css('blog_view');
+
+?>
 
 <div>
-    <div>
+    <div class="resizeimage">
         <img src="/fleurette/img/plant/lifestyle_1.jpg">
     </div>
     <div>ここがcontant
@@ -17,20 +21,6 @@
     <div>content footer(購入ボタン等埋め込み)</div>
 </div>
 
-
-
-
-
-
-
-
-
-
-<?php 
-
-echo $this->Html->css('blog_view');
-
-?>
 
 <div class="blog_view_all">
 
