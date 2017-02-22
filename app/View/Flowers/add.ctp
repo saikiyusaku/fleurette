@@ -1,4 +1,4 @@
-<!-- File: /app/View/Posts/add.ctp -->
+<!-- File: /app/View/Flowers/add.ctp -->
 <?php 
 
 echo $this->Html->script('/ckeditor/ckeditor.js');
@@ -6,22 +6,21 @@ echo $this->Html->script('/ckeditor/ckeditor.js');
 ?>
 
 
-<h1>Add Post</h1>
-<?= $this->Form->create('Post'); ?>
-<?= $this->Form->input('title'); ?>
-<legend><?= __('記事の追加'); ?></legend>
+<h1>Add Flower</h1>
+<?= $this->Form->create('Flower'); ?>
+<?= $this->Form->input('name'); ?>
+<legend><?= __('花の追加'); ?></legend>
 
 <?php
 	echo $this->Form->textarea('body', array(
-			// 'type' => 'textarea',
-			'name' => "data[Post][body]",
+			'name' => "data[Flower][body]",
 			'class' => 'ckeditor',
 			'cols' => '80',
 			'id' => 'editor1',
 			'rows' => '10'
 		));
-	echo $this->Form->input('imagename');
-	echo $this->Form->end(__('save Post'));
+	echo $this->Form->input('flowerimage');
+	echo $this->Form->end(__('save Flower'));
 ?>
 
 <script>

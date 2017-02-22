@@ -30,7 +30,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cover_all');
-		echo $this->Html->css('bootstrap.min');
+		// echo $this->Html->css('bootstrap.min');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -40,7 +40,12 @@
 <body>
 	<div id="container">
 		<div id="header">
-			<h1><?php echo $this->Html->link('Top Page', array('controller' => 'posts', 'action' => 'index')); ?></h1>
+			<ul>
+				<li><?php echo $this->Html->link('TOP', array('controller' => 'posts', 'action' => 'index')); ?><span>/</span></li>
+				<li><?php echo $this->Html->link('FLOWER', array('controller' => 'flowers', 'action' => 'index')); ?><span>/</span></li>
+				<li><?php echo $this->Html->link('PLANT', array('controller' => 'plants', 'action' => 'index')); ?></li>
+			</ul>
+			
 		</div>
 		<div id="content">
 

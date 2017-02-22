@@ -8,13 +8,13 @@ echo $this->Html->css('blog_bu');
 
 <div class="blog_list">
     <ul class="blog_list_block">
-        <?php foreach ($posts as $post): ?>
-            <a href="posts/view/<?= $post['Post']['id'] ?>">
+        <?php foreach ($flowers as $flower): ?>
+            <a href="flowers/view/<?= $flower['Flower']['id'] ?>">
             <li class="blog_list_block_img">
-                    <img src="/fleurette/img/post/<?= $post['Post']['imagename']; ?>">
+                    <img src="/fleurette/img/flower/<?= $flower['Flower']['flowerimage']; ?>">
                 <div class="mask">
                     <div class="caption">
-                    <?php echo $post['Post']['title']; ?>
+                    <?php echo $flower['Flower']['name']; ?>
                     </div>
                 </div>
             </li>
@@ -23,7 +23,7 @@ echo $this->Html->css('blog_bu');
     </ul>
 </div>
 
-<p><?php echo $this->Html->link('Add Post', array('controller' => 'posts', 'action' => 'add')); ?>
+<p><?php echo $this->Html->link('Add Flower', array('controller' => 'flowers', 'action' => 'add')); ?>
 </p>
 
 </div>

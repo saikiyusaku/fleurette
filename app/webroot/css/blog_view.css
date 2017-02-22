@@ -3,6 +3,12 @@
 	text-align: center;
 }
 
+.blog_view_all > p {
+	max-width: 880px;
+	margin: 0 auto;
+	text-align: left;
+}
+
 /*.blog_view_all p {
 	text-align: center;
 }*/

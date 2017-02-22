@@ -1,26 +1,26 @@
-<!-- File: /app/View/Posts/edit.ctp -->
+<!-- File: /app/View/Flowers/edit.ctp -->
 
 
 <?php 
 echo $this->Html->script('/ckeditor/ckeditor.js');
 ?>
 
-<h1>Edit Post</h1>
-<?= $this->Form->create('Post'); ?>
-<?= $this->Form->input('title'); ?>
-<legend><?= __('記事の追加'); ?></legend>
+<h1>Edit Flower</h1>
+<?= $this->Form->create('Flower'); ?>
+<?= $this->Form->input('name'); ?>
+<legend><?= __('花の編集'); ?></legend>
 
 <?php
 	echo $this->Form->textarea('body', array(
-		'name' => "data[Post][body]",
+		'name' => "data[Flower][body]",
 		'class' => 'ckeditor',
 		'cols' => '80',
 		'id' => 'editor1',
 		'rows' => '10'
 		));
 	echo $this->Form->input('id', array('type' => 'hidden'));
-	echo $this->Form->input('imagename');
-	echo $this->Form->end(__('save Post'));
+	echo $this->Form->input('flowerimage');
+	echo $this->Form->end(__('save Flower'));
 ?>
 
 

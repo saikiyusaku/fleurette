@@ -10,14 +10,25 @@
 	/*background-color: rgba(255, 0, 0, 0.15);*/
 }
 
-#header h1 {
-	padding-left: 71px;
+#header > ul {
+	padding-left: 75px;
 }
 
-#header h1 a {
-	color: #4e4b4b;
+#header a {
+	color: #4d4d4d;
 	font-weight: normal;
 	text-decoration: none;
+}
+
+#header > ul > li {
+	color: #4d4d4d;
+	font-size: 46px;
+	display: inline-block;
+}
+
+#header > ul > li > span {
+	font-size: 40px;
+	vertical-align: top;
 }
 
 #footer {
