@@ -20,6 +20,11 @@ echo $this->Html->script('/ckeditor/ckeditor.js');
 		));
 	echo $this->Form->input('id', array('type' => 'hidden'));
 	echo $this->Form->input('plantimage');
+	echo $this->Form->input('kind_and_origin');
+	echo $this->Form->input('lifestyle_image');
+	echo $this->Form->input('price');
+	echo $this->Form->input('size');
+	echo $this->Form->input('stock');
 	echo $this->Form->end(__('save Plant'));
 ?>
 

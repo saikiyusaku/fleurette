@@ -2,20 +2,24 @@
 
 class PostsController extends AppController {
 	public $helpers = array('Html', 'Form', 'Flash');
-	public $components = array('Flash');
+	public $components = array('Flash', 'Paginator');
+
+	public $paginate = [
+		'limit' => 16,
+		'order' => [
+			'Post.created' => 'desc'
+		]
+	];
 
 
 	public function index() {
-		$posts = $this->Post->find('all');
-		$this->set('posts', $posts);
 
-		// foreach ($posts as $post) {
-		// 	if (!empty($post['Post']['imagename'])) {
-		// 		$blogImage = $post['Post']['imagename'];
-		// 		// $this->log($blogImage);
-		// 		$this->set('blogImage', $blogImage);
-		// 	}
-		// }
+		$this->Paginator->settings = $this->paginate;
+		$posts = $this->Paginator->paginate('Post');
+
+		$this->set(compact(
+			'posts'
+		));
 
 	}
 

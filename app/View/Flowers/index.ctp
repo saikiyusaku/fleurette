@@ -1,6 +1,7 @@
 <?php 
 
-echo $this->Html->css('blog_bu');
+// echo $this->Html->css('blog_bu');
+echo $this->Html->css('post_index');
 
 ?>
 

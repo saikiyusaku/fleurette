@@ -20,6 +20,11 @@ echo $this->Html->script('/ckeditor/ckeditor.js');
 			'rows' => '10'
 		));
 	echo $this->Form->input('plantimage');
+	echo $this->Form->input('kind_and_orogin')
+	echo $this->Form->input('lifestyle_image');
+	echo $this->Form->input('price');
+	echo $this->Form->input('size');
+	echo $this->Form->input('stock');
 	echo $this->Form->end(__('save Plant'));
 ?>
 

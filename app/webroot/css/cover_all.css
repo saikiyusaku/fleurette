@@ -11,24 +11,27 @@
 }*/
 
 #header > ul {
-	padding-left: 75px;
-}
-
-#header a {
-	color: #4d4d4d;
-	font-weight: normal;
-	text-decoration: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
 }
 
 #header > ul > li {
 	color: #4d4d4d;
-	font-size: 46px;
+	font-size: 30px;
 	display: inline-block;
 }
 
+#header a {
+	color: #4d4d4d;
+	font-weight: lighter;
+	text-decoration: none;
+}
+
 #header > ul > li > span {
-	font-size: 40px;
-	vertical-align: top;
+	font-size: 30px;
+	font-weight: lighter;
+	color: #4d4d4d;
 }
 
 #footer {

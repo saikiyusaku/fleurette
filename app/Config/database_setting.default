@@ -20,7 +20,12 @@ create table plants (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	name VARCHAR(50),
 	body TEXT,
+	plantimage TEXT,
+	kind_and_origin TEXT,
+	lifestyle_image TEXT,
 	price INT,
+	size TEXT,
+	stock INT,
 	created DATETIME DEFAULT NULL,
 	modified DATETIME DEFAULT NULL
 );

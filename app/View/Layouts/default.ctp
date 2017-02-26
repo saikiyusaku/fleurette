@@ -30,7 +30,7 @@
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cover_all');
-		// echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('bootstrap.min');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -41,9 +41,11 @@
 	<div id="container">
 		<div id="header">
 			<ul>
-				<li><?php echo $this->Html->link('TOP', array('controller' => 'posts', 'action' => 'index')); ?><span>/</span></li>
+				<li><?php echo $this->Html->link('TOP', array('controller' => 'pages', 'action' => 'display', 'top')); ?><span>/</span></li>
+				<li><?php echo $this->Html->link('UPDATE', array('controller' => 'posts', 'action' => 'index')); ?><span>/</span></li>
 				<li><?php echo $this->Html->link('FLOWER', array('controller' => 'flowers', 'action' => 'index')); ?><span>/</span></li>
-				<li><?php echo $this->Html->link('PLANT', array('controller' => 'plants', 'action' => 'index')); ?></li>
+				<li><?php echo $this->Html->link('PLANT', array('controller' => 'plants', 'action' => 'index')); ?><span>/</span></li>
+				<li><?php echo $this->Html->link('ABOUT US', array('controller' => 'pages', 'action' => 'display', 'about_us')); ?></li>
 			</ul>
 			
 		</div>
