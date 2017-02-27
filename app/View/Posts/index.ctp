@@ -24,6 +24,10 @@ echo $this->Html->css('post_index');
     </ul>
 </div>
 
+<?php if (!empty($authUser)) : ?>
+    <?= 'adminUserでログイン中' ?>
+<?php endif; ?>
+
 <p><?php echo $this->Html->link('Add Post', array('controller' => 'posts', 'action' => 'add')); ?>
 </p>
 

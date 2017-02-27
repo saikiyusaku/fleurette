@@ -1,0 +1,29 @@
+.intro-header {
+	overflow: hidden;
+	height: 700px;
+	width: 100%;
+	text-align: center;
+}
+
+.backgroundimage {
+	background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+.layerTransparent {
+	background-color: rgba(255,255,255,0.5);
+	height: 100%;
+	width: 100%;
+}
+
+.site_heading {
+	text-align: center;
+}
+
+.site_heading > h1 {
+	font-size: 80px;
+	font-family: arial narrow;
+}

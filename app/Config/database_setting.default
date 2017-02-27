@@ -30,6 +30,15 @@ create table plants (
 	modified DATETIME DEFAULT NULL
 );
 
+create table users (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	name VARCHAR(50),
+	password VARCHAR(50),
+	is_admin TINYINT DEFAULT 0,
+	created DATETIME DEFAULT NULL,
+	modified DATETIME DEFAULT NULL
+);
+
 
 INSERT INTO posts (title,body,created)
     VALUES ('一つ目の記事', 'これは、記事の本文です。たくさん文字数が入ります。this is first posts. its test.', NOW());
@@ -37,3 +46,8 @@ INSERT INTO posts (title,body,created)
     VALUES ('サイト(お店)の名前はとりあえずfleurette', 'そこに本文が続きます。これはフランス語でウィッピングという意味。Norah Jonesの曲名より。', NOW());
 INSERT INTO posts (title,body,created)
     VALUES ('会社のHPだけなら複雑なDB処理はなさそう。', 'そこに本文が続きます。画像処理を軽くしたい。とりあえずはURLから引っ張ってくる感じでしのぐが、後で要修正。good luck!!', NOW());
+
+
+
+INSERT INTO users (name, is_admin, password)
+	VALUES ('adminuser', 1, 'notsecret');

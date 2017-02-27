@@ -17,8 +17,12 @@ class PostsController extends AppController {
 		$this->Paginator->settings = $this->paginate;
 		$posts = $this->Paginator->paginate('Post');
 
+		$authUser = $this->Auth->user();
+		// $this->log($authUser);
+
 		$this->set(compact(
-			'posts'
+			'posts',
+			'authUser'
 		));
 
 	}
@@ -33,16 +37,22 @@ class PostsController extends AppController {
 		if (!$post) {
 			throw new NotFoundException(__('Invalid post'));
 		}
-		// $this->log($post);
 		$this->set('post', $post);
 	}
 
 
 	public function add() {
+
+		// $authUser = $this->Auth->user();
+
+		// if ($authUser['is_admin'] != 1) {
+  //           throw new NotFoundException();
+  //           $this->log('sdfghjkl;');
+  //       }
+
 		if ($this->request->is('post')) {
 			$this->Post->create();
 			if ($this->Post->save($this->request->data)) {
-				// $this->log($this->request->data);
 				$this->Flash->success(__('Your post has been saved.'));
 				return $this->redirect(array('action' => 'index'));
 			}
