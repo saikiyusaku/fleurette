@@ -47,7 +47,6 @@
 				<li><?php echo $this->Html->link('PLANT', array('controller' => 'plants', 'action' => 'index')); ?><span>/</span></li>
 				<li><?php echo $this->Html->link('ABOUT US', array('controller' => 'pages', 'action' => 'display', 'about_us')); ?></li>
 			</ul>
-			
 		</div>
 		<div id="content">
 
