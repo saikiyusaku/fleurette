@@ -17,6 +17,10 @@
 
 /*ここからplants/view.ctp*/
 
+.view_all {
+	max-width: 1050px;
+}
+
 .resizeimage {
 	height: 700px;
 	width: 100%;

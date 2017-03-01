@@ -10,7 +10,7 @@ echo $this->Html->css('plant_view');
         <img src="/fleurette/img/plant/lifestyle_1.jpg">
     </div> -->
     <!-- <div class="site-box"> -->
-    <div class="container">
+    <div class="container view_all">
     <div class="row">
     	<!-- <div class="block_image"> -->
     	<div class="col-sm-5 block_image">

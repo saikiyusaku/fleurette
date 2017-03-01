@@ -2,12 +2,54 @@
 
 class PlantsController extends AppController {
 	public $helpers = array('Html', 'Form', 'Flash');
-	public $components = array('Flash');
+	public $components = array('Flash', 'Paginator');
+
+	public $paginate = [
+		'limit' => 28,
+		'order' => [
+			'Plant.created' => 'desc'
+		]
+	]; 
 
 
 	public function index() {
-		$plants = $this->Plant->find('all');
-		$this->set('plants', $plants);
+		$this->Paginator->settings = $this->paginate;
+		$plants = $this->Paginator->paginate('Plant');
+
+		// $this->log($plants);
+
+		// $plantSize = $this->somefunction();
+
+
+		// foreach ($plants as $plant) {
+		// 	$plantSize = 
+		// 	$plantPrice = $plant['Plant']['price'];
+
+		// 	if ($plant['Plant']['size'] =< 2) {
+		// 		$plantSize = '2号鉢以下';
+		// 	} elseif ($plant['Plant']['size'] == 3 ) {
+		// 		$plantSize = '3号鉢';
+		// 	} elseif ($plant['Plant']['size'] == 4) {
+		// 		$plantSize = '4号鉢';
+		// 	} elseif ($plant['Plant']['size'] == 5) {
+		// 		$plantSize = '5号鉢';
+		// 	} elseif ($plant['Plant']['size'] == 6) {
+		// 		$plantSize = '6号鉢';
+		// 	} elseif ($plant['Plant']['size'] >= 7) {
+		// 		$plantSize = '7号鉢以上'
+		// 	}
+
+		// 	$this->log($plant);
+		// 	$this->log($plantSize);
+		// 	$this->log($plantPrice);
+		// }
+
+		$authUser = $this->Auth->user();
+
+		$this->set(compact(
+			'plants',
+			'authUser'
+		));
 
 	}
 
